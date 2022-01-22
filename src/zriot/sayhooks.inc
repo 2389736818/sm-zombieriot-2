@@ -102,7 +102,7 @@ public bool Market_OnWeaponSelected(int client, char[] weaponid)
     return true;
 }
 
-public int Market_PostOnWeaponSelected(int client, bool &allowed)
+public void Market_PostOnWeaponSelected(int client, bool allowed)
 {
     if (!allowed)
     {
