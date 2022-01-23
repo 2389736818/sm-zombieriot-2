@@ -12,6 +12,7 @@
 #include <sdkhooks>
 #include <cstrike>
 #include <clientprefs>
+#include <multicolors>
 
 #undef REQUIRE_PLUGIN
 #include <market>
