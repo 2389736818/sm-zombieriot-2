@@ -26,7 +26,7 @@ stock void ZRiot_PrintToChat(int client, any ...)
         VFormat(phrase, sizeof(phrase), "%t", 2);
         FormatTextString(phrase, sizeof(phrase));
         
-        PrintToChat(client, phrase);
+        CPrintToChat(client, phrase);
     }
     else
     {
@@ -35,7 +35,7 @@ stock void ZRiot_PrintToChat(int client, any ...)
         VFormat(phrase, sizeof(phrase), "%t", 2);
         FormatTextString(phrase, sizeof(phrase));
         
-        PrintToServer(phrase);
+        CPrintToServer(phrase);
         
         for (int x = 1; x <= MaxClients; x++)
         {
@@ -46,7 +46,7 @@ stock void ZRiot_PrintToChat(int client, any ...)
                 VFormat(phrase, sizeof(phrase), "%t", 2);
                 FormatTextString(phrase, sizeof(phrase));
                 
-                PrintToChat(x, phrase);
+                CPrintToChat(x, phrase);
             }
         }
     }
@@ -89,7 +89,7 @@ stock void ZRiot_PrintToServer(any ...)
     VFormat(phrase, sizeof(phrase), "%t", 1);
     Format(buffer, sizeof(buffer), "[%t] %s", "ZRiot", phrase);
     
-    PrintToServer(buffer);
+    CPrintToServer(buffer);
 }
 
 stock void ZRiot_LogMessage(any ...)
@@ -112,5 +112,5 @@ stock void ZRiot_ReplyToCommand(int client, any ...)
     VFormat(phrase, sizeof(phrase), "%t", 2);
     FormatTextString(phrase, sizeof(phrase));
     
-    ReplyToCommand(client, phrase);
+    CReplyToCommand(client, phrase);
 }
